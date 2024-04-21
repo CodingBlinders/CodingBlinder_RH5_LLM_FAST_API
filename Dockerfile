@@ -14,7 +14,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Copy .env file into the container
-COPY /home/realhack/.env .
+COPY /home/realhack/secret/llm/.env .
 
 # Expose the port that FastAPI will run on
 EXPOSE 8081
