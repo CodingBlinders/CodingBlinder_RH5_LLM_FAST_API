@@ -10,11 +10,11 @@ COPY requirements.txt .
 # Install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
+# Copy .env file into the container
+RUN cp /home/realhack/secret/llm/.env .
+
 # Copy the FastAPI application code into the container
 COPY . .
-
-# Copy .env file into the container
-COPY /home/realhack/secret/llm/.env .
 
 # Expose the port that FastAPI will run on
 EXPOSE 8081
