@@ -20,4 +20,4 @@ COPY /home/realhack/.env .
 EXPOSE 8081
 
 # Command to run the application using uvicorn
-CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8081"]
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8081"]
